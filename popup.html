@@ -370,13 +370,13 @@ function showMessage(msg, xml) {
 
 <body onload="configurePage();">
 <div>
-    <h1>Test a BigBlueButton API Call</h1>
+    <h1>Тестовые вызовы API BigBlueButton</h1>
     <p id="message"></p>
     <form id="mainForm" action="#" method="get">
         <div class="field">
-            <label for="callSelector">API Call:</label>
+            <label for="callSelector">Вызов API:</label>
             <select id="callSelector" name="callSelector" onchange="callChanged()" onblur="callChanged()">
-                <option value="__NOCALL__">-- Choose One --</option>
+                <option value="__NOCALL__">-- Выберите из --</option>
                 <option value="getMeetings">getMeetings</option>
                 <option value="create">create</option>
                 <option value="join">join</option>
@@ -391,24 +391,25 @@ function showMessage(msg, xml) {
             </div>
         </fieldset>
         <fieldset id="serverFields">
-            <legend>Server Configuration</legend>
+            <legend>Конфигурация сервера</legend>
             <div class="field">
-                <label for="serverDomain">Server:</label>
+                <label for="serverDomain">Адрес сервера BBB:</label>
                 <input type="text" name="serverDomain" onchange="tryLoadingConfigForServer(this.value)" onblur="tryLoadingConfigForServer(this.value)" value="devbuild.bigbluebutton.org" />
             </div>
             <div class="field">
-                <label for="apiVersion">API Version:</label>
+                <label for="apiVersion">Версия API:</label>
                 <select id="apiVersion" name="apiVersion" onchange="callChanged()" onblur="callChanged()">
                     <option value="0.64">0.64</option>
                     <option value="0.7">0.7</option>
+                    <option value="0.8">0.8</option>
                 </select>
             </div>
             <div class="field">
-                <label for="contextPath">Context Path:</label>
+                <label for="contextPath">Путь вызова:</label>
                 <input type="text" name="contextPath" value="/bigbluebutton/api" />
             </div>
             <div class="field">
-                <label for="securitySalt">Security Salt:</label>
+                <label for="securitySalt">Секретное слово:</label>
                 <input type="text" name="securitySalt" value="639259d4-9dd8-4b25-bf01-95f9567eaf4b" />
             </div>
         </fieldset>
